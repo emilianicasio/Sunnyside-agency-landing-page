@@ -14,7 +14,6 @@ body {
 }
 
 .logo {
-    width: 170px;
     margin-left: 50px;
 }
 
@@ -39,8 +38,9 @@ body {
     text-decoration: none;
     font-weight: 400;
     font-size: 18px;
-    margin-left: 50px;
+    margin-right: 50px;
 }
+
 .nav-button {
     background-color: hsl(0, 0%, 100%);
     border: none;
@@ -51,7 +51,7 @@ body {
     width: 140px;
     padding: 20px 30px 20px 30px;
     font-size: 16px;
-    margin: 0px 40px;
+    margin-right: 40px;
 }
 
 .home {
@@ -75,4 +75,70 @@ body {
 
 .arrow {
     text-align: center;
+}
+
+.seccion-about {
+    display: grid;
+    grid-template-columns: minmax(400px,1fr) minmax(400px,1fr);
+}
+
+.about-item {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-item {
+    width: 350px;
+}
+
+.second-tittle {
+    font-family: "Fraunces";
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: hsl(212, 27%, 19%);
+}
+
+.paragraph {
+    font-size: 16px;
+    color: hsl(213, 9%, 39%);
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.about-image {
+   width: 100%;
+   height: auto;
+}
+
+.about-link {
+    font-family: "Fraunces";
+    text-transform: uppercase;
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    letter-spacing: 2px;
+}
+
+.last-images {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.last-text {
+    position: absolute;
+    top:70%;
+    width: 320px;
+    text-align: center;
+    color: hsl(212, 27%, 19%);
+    line-height: 25px;;
+}
+
+.third-tittle{
+    position: absolute;
+    top: 60%;
+    font-family: "Fraunces";
+    font-size: 20px;
 }
