@@ -28,7 +28,7 @@ body {
     list-style: none;
 }
 
-.nav-li {
+.nav-link, .nav-link:visited,.nav-link:active {
     color: hsl(0, 0%, 100%);
     text-decoration: none;
     font-weight: 400;
@@ -79,7 +79,7 @@ body {
 
 .seccion-about {
     display: grid;
-    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);
+    grid-template-columns: repeat(2, 50%);
 }
 
 .about-item {
@@ -149,4 +149,125 @@ body {
     top: 60%;
     font-family: "Fraunces";
     font-size: 20px;
+}
+
+.testimonial-tittle{
+    text-transform: uppercase;
+    font-family: "Fraunces";
+    color: hsl(210, 4%, 67%);
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    letter-spacing: 5px;
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+
+.testimonial-item{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.middle-item{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.testimonial-image{
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.testimonial-paragraph{
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 60px;
+
+}
+.testimonial-name{
+    font-family: "Fraunces";
+    margin-bottom: 20px;
+}
+.testimonial-ocupation{
+    color: hsl(210, 4%, 67%)
+}
+
+.seccion-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-line, .second-line{
+    width: 50%;
+    height: 450px;
+    display: flex;
+}
+
+.gallery-item{
+  overflow: hidden;
+}
+
+.gallery-image{
+    height: 100%;
+    width: auto;
+}
+
+.footer{
+    min-height: 40vh;
+    background: #90d4c5;
+    text-align: center;
+}
+
+.footer-logo{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.footer-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 50px;
+}
+.footer-link, .footer-link:visited,.footer-link:active {
+    text-decoration: none;
+    color: #2C7566;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;  
+}
+.footer-li:nth-child(2){
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.footer-icon{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.footer-svg{
+    fill:#2C7566;
+}
+.footer-link:hover, .footer-svg:hover{
+    color: hsl(0, 0%, 100%);
+    fill: hsl(0, 0%, 100%);
+}
+
+
+@media only screen and (max-width: 780px){
+    .first-line, .second-line{
+        width: 100%;
+    }
 }
