@@ -12,12 +12,18 @@ body {
     margin-left: 50px;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
 .nav {
     display: flex;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
+    padding-right: 40px;
 }
 .nav-right {
     display: flex;
@@ -28,7 +34,9 @@ body {
     list-style: none;
 }
 
-.nav-link, .nav-link:visited,.nav-link:active {
+.nav-link,
+.nav-link:visited,
+.nav-link:active {
     color: hsl(0, 0%, 100%);
     text-decoration: none;
     font-weight: 400;
@@ -46,12 +54,52 @@ body {
     width: 140px;
     padding: 20px 30px 20px 30px;
     font-size: 16px;
-    margin-right: 40px;
 }
 
 .nav-button:hover {
     background-color: hsl(200, 91%, 74%);
     color: hsl(0, 0%, 100%);
+}
+
+.mobile-menu {
+    background: hsl(0, 0%, 100%);
+    width: 85vw;
+    text-align: center;
+    margin: auto;
+    padding-top: 45px;
+    padding-bottom: 35px;
+    margin-top: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    position: relative;
+    display: none;
+}
+
+.top-figure {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -35px;
+    right: 0%;
+    background: hsl(0, 0%, 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.ul-nav-mobile {
+    list-style: none;
+}
+.nav-link-mobile {
+    text-decoration: none;
+    color: hsl(213, 9%, 39%);
+    font-size: 18px;
+}
+
+.nav-li-mobile {
+    margin-bottom: 35px;
+}
+
+.mobile-button {
+    background: hsl(50, 100%, 50%);
 }
 
 .home {
@@ -151,7 +199,7 @@ body {
     font-size: 20px;
 }
 
-.testimonial-tittle{
+.testimonial-tittle {
     text-transform: uppercase;
     font-family: "Fraunces";
     color: hsl(210, 4%, 67%);
@@ -161,7 +209,7 @@ body {
     letter-spacing: 5px;
 }
 
-.testimonial-container{
+.testimonial-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +217,7 @@ body {
     padding-bottom: 150px;
 }
 
-.testimonial-item{
+.testimonial-item {
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -178,96 +226,122 @@ body {
     margin-bottom: 50px;
 }
 
-.middle-item{
+.middle-item {
     margin-left: 40px;
     margin-right: 40px;
 }
 
-.testimonial-image{
+.testimonial-image {
     border-radius: 50%;
     margin-bottom: 50px;
 }
 
-.testimonial-paragraph{
+.testimonial-paragraph {
     text-align: center;
     line-height: 30px;
     padding-bottom: 60px;
-
 }
-.testimonial-name{
+.testimonial-name {
     font-family: "Fraunces";
     margin-bottom: 20px;
 }
-.testimonial-ocupation{
-    color: hsl(210, 4%, 67%)
+.testimonial-ocupation {
+    color: hsl(210, 4%, 67%);
 }
 
-.seccion-gallery{
+.seccion-gallery {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-.first-line, .second-line{
+.first-line,
+.second-line {
     width: 50%;
     height: 450px;
     display: flex;
 }
 
-.gallery-item{
-  overflow: hidden;
+.gallery-item {
+    overflow: hidden;
 }
 
-.gallery-image{
+.gallery-image {
     height: 100%;
     width: auto;
 }
 
-.footer{
+.footer {
     min-height: 40vh;
     background: #90d4c5;
     text-align: center;
 }
 
-.footer-logo{
+.footer-logo {
     padding-top: 70px;
     padding-bottom: 50px;
 }
 
-.footer-list{
+.footer-list {
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
     padding-bottom: 50px;
 }
-.footer-link, .footer-link:visited,.footer-link:active {
+.footer-link,
+.footer-link:visited,
+.footer-link:active {
     text-decoration: none;
-    color: #2C7566;
+    color: #2c7566;
     text-decoration: none;
     font-weight: 400;
-    font-size: 18px;  
+    font-size: 18px;
 }
-.footer-li:nth-child(2){
+.footer-li:nth-child(2) {
     margin-left: 50px;
     margin-right: 50px;
 }
-.footer-icon{
+.footer-icon {
     margin-left: 20px;
     margin-right: 20px;
 }
-.footer-svg{
-    fill:#2C7566;
+.footer-svg {
+    fill: #2c7566;
 }
-.footer-link:hover, .footer-svg:hover{
+.footer-link:hover,
+.footer-svg:hover {
     color: hsl(0, 0%, 100%);
     fill: hsl(0, 0%, 100%);
 }
 
-
-@media only screen and (max-width: 780px){
-    .first-line, .second-line{
+@media only screen and (max-width: 780px) {
+    .first-line,
+    .second-line {
         width: 100%;
+    }
+    .nav-right {
+        display: none;
+    }
+    .hamburger {
+        display: contents;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    .nav-show {
+        display: inline-block;
+    }
+    .seccion-about {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .about-item:nth-child(1),
+    .about-item:nth-child(4) {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
