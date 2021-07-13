@@ -1,2 +1,2 @@
 # Sunnyside-agency-landing-page
-Frontend Mentor challenge -under construction-.
+Frontend Mentor challenge.
