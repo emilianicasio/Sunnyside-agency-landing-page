@@ -166,6 +166,7 @@ body {
     text-decoration: none;
     color: hsl(212, 27%, 19%);
     letter-spacing: 2px;
+    border: 5px solid transparent;
 }
 
 .about-link:hover {
@@ -268,8 +269,9 @@ body {
 }
 
 .gallery-image {
-    height: 100%;
-    width: auto;
+   width: 100%;
+   height: 100%;
+   resize: inherit;
 }
 
 .footer {
